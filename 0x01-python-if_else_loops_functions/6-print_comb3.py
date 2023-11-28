@@ -5,4 +5,3 @@ for tens_digit in range(10):
             print("{:d}{:d}".format(tens_digit, units_digit))
         else:
             print("{:d}{:d}".format(tens_digit, units_digit), end=', ')
-
