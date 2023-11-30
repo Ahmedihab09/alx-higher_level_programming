@@ -11,7 +11,7 @@ if __name__ == "__main__":
     mul_result = calculator_1.mul(a, b)
     div_result = calculator_1.div(a, b)
 
-    print("{} + {} = {}".format(a, b, add_result))
-    print("{} - {} = {}".format(a, b, sub_result))
-    print("{} * {} = {}".format(a, b, mul_result))
-    print("{} / {} = {}".format(a, b, div_result))
+    print(f"{a} + {b} = {add_result}")
+    print(f"{a} - {b} = {sub_result)")
+    print(f"{a} * {b} = {mul_result)")
+    print(f"{a} / {b} = {div_result}")
