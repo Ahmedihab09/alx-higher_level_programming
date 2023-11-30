@@ -3,7 +3,7 @@
 a = 10
 b = 5
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     import calculator_1
 
     add_result = calculator_1.add(a, b)
