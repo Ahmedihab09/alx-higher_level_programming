@@ -6,7 +6,12 @@ b = 5
 if __name__ == "__main__":
     from calculator_1  import add, sub, mul, div
 
-    print(f"{a} + {b} = {add(a, b)}")
-    print(f"{a} - {b} = {sub(a, b)}")
-    print(f"{a} * {b} = {mul(a, b)}")
-    print(f"{a} / {b} = {div(a, b)}")
+    result_add = add(a, b)
+    result_sub = sub(a, b)
+    result_mul = mul(a, b)
+    result_div = div(a, b)
+
+    print(a, "+", b, "=", result_add)
+    print(a, "-", b, "=", result_sub)
+    print(a, "*", b, "=", result_mul)
+    print(a, "/", b, "=", result_div)
