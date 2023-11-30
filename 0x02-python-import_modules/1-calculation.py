@@ -4,12 +4,12 @@ a = 10
 b = 5
 
 if __name__ == "__main__":
-    import calculator_1
+    from calculator_1  import add, sub, mul, div
 
-    add_result = calculator_1.add(a, b)
-    sub_result = calculator_1.sub(a, b)
-    mul_result = calculator_1.mul(a, b)
-    div_result = calculator_1.div(a, b)
+    add_result = add(a, b)
+    sub_result = sub(a, b)
+    mul_result = mul(a, b)
+    div_result = div(a, b)
 
     print(f"{a} + {b} = {add_result}")
     print(f"{a} - {b} = {sub_result}")
