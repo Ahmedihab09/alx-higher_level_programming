@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def add_tuple(tuple_a=(), tuple_b=()):
     # If a tuple is smaller than 2, use the value 0 for each missing integer
     a = tuple_a + (0, 0)
