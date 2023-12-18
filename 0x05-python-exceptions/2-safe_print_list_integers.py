@@ -11,5 +11,8 @@ def safe_print_list_integers(my_list=[], x=0):
         print()
         return count
     except (IndexError, ValueError, TypeError) as e:
-        print("Error: {}".format(e))
-        return count
+        if "list index out of range" in str(e):
+            print("Error: {}".format(e))
+            return count
+        else:
+            raise e
