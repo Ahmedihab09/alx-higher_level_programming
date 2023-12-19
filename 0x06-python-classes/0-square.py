@@ -2,6 +2,7 @@
 
 '''Empty Square Class'''
 
+
 class Square:
 
     '''pass to define empty square class'''
