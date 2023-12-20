@@ -8,7 +8,7 @@ class Square:
     A class representing a square.
 
     Attributes:
-        __size (int): Private instance attribute
+        __size (int): Private instance attribute 
         representing the size of the square.
     """
 
@@ -63,3 +63,14 @@ class Square:
             int: The area of the square.
         """
         return self.__size ** 2
+
+    def my_print(self):
+        """
+        Prints the square with the character # to stdout.
+        If size is equal to 0, prints an empty line.
+        """
+        if self.__size == 0:
+            print()
+        else:
+            for _ in range(self.__size):
+                print("#" * self.__size)
