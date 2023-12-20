@@ -123,20 +123,3 @@ class SinglyLinkedList:
             result += str(current.data) + "\n"
             current = current.next_node
         return result.strip()
-
-
-# Example usage:
-
-# Create a singly linked list
-linked_list = SinglyLinkedList()
-
-# Insert values in sorted order
-linked_list.sorted_insert(5)
-linked_list.sorted_insert(2)
-linked_list.sorted_insert(8)
-linked_list.sorted_insert(1)
-linked_list.sorted_insert(7)
-
-# Print the linked list
-print(linked_list)
-
