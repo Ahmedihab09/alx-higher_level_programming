@@ -4,13 +4,13 @@
 
 
 class Rectangle:
-        ''' Define a Rectangle.
+    ''' Define a Rectangle.
         Attributes:
             width (int): width of rectangle. -> private instance attribute
             height (int): height of rectangle. -> private instance attribute
     '''
     def __init__(self, width=0, height=0):
-         ''' Initialize Rectangle.
+        ''' Initialize Rectangle.
             Args:
                 width (int): width of rectangle.
                 height (int): height of rectangle.
@@ -50,7 +50,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-         '''setter
+        '''setter
         Args:
             value (int): height of rectangle.
 
@@ -58,7 +58,7 @@ class Rectangle:
             TypeError: height is not an integer.
             ValueError: height is less than zero.
         '''
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
