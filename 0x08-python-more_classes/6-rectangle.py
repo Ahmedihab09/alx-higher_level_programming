@@ -5,10 +5,13 @@ class Rectangle:
     Class that defines a rectangle.
     """
 
+    number_of_instances = 0  # Public class attribute
+
     def __init__(self, width=0, height=0):
         """
         Initialize a new Rectangle instance.
         """
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -77,4 +80,4 @@ class Rectangle:
         Destructor for a Rectangle instance.
         """
         print("Bye rectangle...")
-
+        Rectangle.number_of_instances -= 1
