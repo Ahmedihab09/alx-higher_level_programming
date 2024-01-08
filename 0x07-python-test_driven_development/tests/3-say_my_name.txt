@@ -1,0 +1,57 @@
+============================
+``3-say_my_name`` module
+============================
+
+Using ``say_my_name``
+---------------------
+
+The `say_my_name` function prints the full name based on the given first and last names. The function requires both arguments to be strings.
+
+::
+
+Importing function from the module:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Normal usage:
+
+    >>> say_my_name("John", "Doe")
+    My name is John Doe
+
+    >>> say_my_name("Alice")
+    My name is Alice 
+
+Non-string first name:
+
+    >>> say_my_name(123, "Smith")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+Non-string last name:
+
+    >>> say_my_name("John", 456)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+Empty strings:
+
+    >>> say_my_name("", "")
+    My name is  
+
+Long names:
+
+    >>> say_my_name("Montgomery", "Burns")
+    My name is Montgomery Burns
+
+Special characters:
+
+    >>> say_my_name("Élise", "Østergaard")
+    My name is Élise Østergaard
+
+Numeric strings:
+
+    >>> say_my_name("007", "Bond")
+    My name is 007 Bond
+
+
