@@ -1,0 +1,60 @@
+============================
+``text_indentation`` module
+============================
+
+Using ``text_indentation``
+---------------------------
+
+This function takes a string and prints it with two new lines after each period, question mark, and colon. Spaces after these punctuation marks are not printed.
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    >>> text_indentation("Hello? Are you sure. Yes:")
+    Hello?
+    
+    Are you sure.
+    
+    Yes:
+
+    >>> text_indentation("Check: this out. Is it working? Yes.")
+    Check:
+    
+    this out.
+    
+    Is it working?
+    
+    Yes.
+
+    >>> text_indentation("No space after?This should work.")
+    No space after?
+    
+    This should work.
+
+    >>> text_indentation("Single line.")
+    Single line.
+
+    >>> text_indentation("Line with space at end. ")
+    Line with space at end.
+
+    >>> text_indentation(" ")
+    
+
+    >>> text_indentation("")
+    
+
+    >>> try:
+    ...     text_indentation(100)
+    ... except Exception as e:
+    ...     print(e)
+    text must be a string
+
+    >>> try:
+    ...     text_indentation(None)
+    ... except Exception as e:
+    ...     print(e)
+    text must be a string
+
+Remember to test edge cases such as empty strings, strings with only spaces, and non-string inputs.
+
