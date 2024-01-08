@@ -1,0 +1,79 @@
+============================
+``2-matrix_divided`` module
+============================
+
+Using ``matrix_divided``
+------------------------
+
+The `matrix_divided` function divides each element of a matrix (list of lists) by a given divisor and returns a new matrix with the results. The elements of the matrix must be integers or floats, and the divisor must also be a number.
+
+::
+
+Importing function from the module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Basic division:
+
+    >>> matrix = [[4, 8, 12], [16, 20, 24]]
+    >>> matrix_divided(matrix, 2)
+    [[2.0, 4.0, 6.0], [8.0, 10.0, 12.0]]
+
+Different row sizes:
+
+    >>> matrix = [[1, 2, 3], [4, 5]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must have the same size
+
+Non-numeric matrix element:
+
+    >>> matrix = [[1, "2", 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Non-numeric divisor:
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, "3")
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+Divisor is zero:
+
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+Rounding:
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Non-list input:
+
+    >>> matrix_divided(123, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Empty matrix:
+
+    >>> matrix_divided([], 1)
+    []
+
+Single element matrix:
+
+    >>> matrix_divided([[5]], 5)
+    [[1.0]]
+
+Nested empty list:
+
+    >>> matrix_divided([[]], 1)
+    [[]]
+
