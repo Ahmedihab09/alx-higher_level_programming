@@ -4,7 +4,11 @@
 
 
 def read_file(filename=""):
-    # Use 'with' statement for safe opening and closing of the file
+    '''
+    Reads a text file using UTF-8 encoding and prints its contents to stdout.
+    Uses 'with' statement for resource management.
+    '''
+
     with open(filename, "r", encoding="utf-8") as file:
-        # Read the file line by line and print to stdout
-        print(file.read(), end="")
+        for line in file:
+            print(line, end="")
