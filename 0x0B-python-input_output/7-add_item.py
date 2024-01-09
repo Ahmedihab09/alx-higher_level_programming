@@ -1,20 +1,15 @@
 #!/usr/bin/python3
 
 '''add_item module'''
-
-
 import sys
-
-'''Import the functions from other files'''
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-filename = 'add_item.json'
 
 try:
-    items = load_from_json_file(filename)
-except (FileNotFoundError, json.JSONDecodeError):
-    items = []
+    old_list = load_from_json_file('add_item.json')
+except FileNotFoundError:
+    old_list = []
 
-items.extend(sys.argv[1:])
-save_to_json_file(items, filename)
+new_list = old_list + sys.argv[1:]
+save_to_json_file(new_list, 'add_item.json')
