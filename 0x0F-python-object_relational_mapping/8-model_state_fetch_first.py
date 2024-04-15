@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+""" Select all states from database """
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
