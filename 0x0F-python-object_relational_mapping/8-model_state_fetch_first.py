@@ -2,7 +2,7 @@
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import Session
 
 if __name__ == "__main__":
     username, password, db_name = sys.argv[1:]
@@ -10,8 +10,7 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(username, password, db_name))
 
-    Session = sessionmaker(bind=engine)
-    session = Session()
+    session = Session(engine)
     first_state = session.query(State).order_by(State.id).first()
 
     if first_state:
